@@ -1,0 +1,78 @@
+.main {
+  @apply flex min-h-screen flex-col items-center justify-center;
+}
+
+.card {
+  @apply bg-[#1c1938] w-[900px] h-[350px] rounded-lg flex justify-between items-center overflow-hidden;
+}
+
+.cardContent {
+  @apply flex flex-col px-[50px];
+}
+
+.imageWrapper {
+  @apply w-[450px] h-full;
+}
+
+.imageWrapper .image {
+  background-image: url("../public/image-header-desktop.jpg");
+  @apply bg-no-repeat bg-center bg-cover w-full h-full relative;
+}
+
+.cardContent h1 {
+  @apply text-[30px] font-bold max-w-sm mb-5 leading-10;
+}
+
+.cardContent h1 strong {
+  @apply text-[#9966CC];
+}
+
+.cardContent > p:first-of-type {
+  @apply text-[#afacc7] text-xs max-w-xs;
+}
+
+.cardContent .row {
+  @apply flex justify-start items-center w-full mt-[60px] gap-[50px];
+}
+
+.cardContent .row div span {
+  @apply text-2xl uppercase font-bold;
+}
+
+.cardContent .row div p {
+  @apply text-[#817e99] tracking-wider text-xs uppercase;
+}
+
+@media (max-width: 920px) {
+  .main {
+    @apply my-12 mx-5;
+  }
+
+  .card {
+    @apply flex-col-reverse w-[350px] h-[600px] text-center justify-between gap-7 pb-8;
+  }
+
+  .card h1 {
+    @apply text-lg mb-2;
+  }
+
+  .card > p:first-of-type {
+    @apply text-base;
+  }
+
+  .imageWrapper .image {
+    background-image: url("../public/image-header-mobile.jpg");
+  }
+
+  .imageWrapper {
+    @apply max-w-full h-[300px];
+  }
+
+  .cardContent .row {
+    @apply flex-col gap-3 mt-6;
+  }
+
+  .cardContent .row div span {
+    @apply text-lg;
+  }
+}
